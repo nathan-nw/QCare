@@ -1,15 +1,27 @@
 /* General Container */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 .dashboard-container {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f0f4ff, #d9e6ff);
+  position: relative;
+  font-family: "DM Sans";
   color: #333;
   padding: 20px;
   box-sizing: border-box;
-  max-width: 430px; /* Matches the iPhone 14 Pro Max screen width */
-  width: 100%; /* Ensures it scales on smaller devices */
-  margin: 0 auto; /* Centers the container */
+  max-width: 430px;
+  height: 932px;
+  width: 100%;
+  margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 10px;
+
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 70%;
+  height: auto;
 }
 
 /* Header */
@@ -18,321 +30,395 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.logo {
-  width: 80px; /* Scaled to fit smaller screens */
-  height: auto;
-  margin-bottom: 10px;
+/* Greeting Section */
+.greeting {
+  text-align: left; /* Align "Hello" and "Patient" text to the left */
+  width: 100%; /* Ensure the width spans the container for alignment */
 }
 
 .greeting h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
+  color: #333;
+  font-family: "DM Sans";
+  
 }
 
 .greeting h1 {
   font-size: 1.5rem;
   margin: 5px 0;
+  font-weight: bold;
+  color: #002148;
 }
 
-.highlight {
+.highlight-id{
+  color: #1550A9;
+  font-weight: bold;
+  color: #1550A9;
+font-family: "DM Sans";
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
+
+/* Hospital Status */
+/* Hospital Status */
+/* Hospital Status */
+/* Hospital Status */
+.hospital-status {
+  z-index: 1000; /* Ensure it appears above other elements */
+  margin-top: 15px;
+  background: rgba(210, 215, 247, 0.5); /* Light blue background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Add padding for spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex; /* Enable flexbox */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Vertically center items */
+  width: 90%; /* Ensure it spans full width */
+}
+
+.hospital-status span {
+  font-size: 0.9rem; /* Adjust font size */
   color: #002148;
   font-weight: bold;
-}
-
-.hospital-status {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: left; /* Align text to the left */
 }
 
 .status-button {
-  margin-top: 5px;
-  background: #d0d7f7;
-  color: #002148;
+  background: var(--Blue-Linear, linear-gradient(274deg, #697ee9 0%, #9DCEFF 124.45%));  border-radius: 20px; /* Rounded corners */
+  color: #ffffff;
   border: none;
   border-radius: 20px;
-  padding: 8px 15px; /* Adjusted padding for better tap targets */
-  cursor: pointer;
+  padding: 6px 10px;
   font-size: 0.9rem;
-}
-
-/* Main Content */
-.dashboard-main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Matches other elements' shadow */
+  text-align: right; 
+  font-family: "DM Sans";/* Align button to the right */
 }
 
 /* Path Progress */
 .path-progress {
-  width: 156px;
-  height: 236px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  border: 1px solid #000;
-  background: #ffdbdb;
+  padding: 30px;
+  background: #ffe5e5;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-bottom: 20px;
+  width: 7.6rem;
+height: 14.75rem;
+flex-shrink: 0;
+margin-top: 30px;
+align-items: center;
+border: 1px solid black; /* Thickness and color of the border */
 
-  /* card-shadow */
-  box-shadow: 0px 10px 40px 0px rgba(29, 22, 23, 0.07);
 }
 
 .path-progress h3 {
   font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.path-progress ul {
-  list-style: none;
-  padding: 0;
-}
-
-.path-progress li {
-  display: flex;
-  justify-content: space-between;
+  font-weight: bold;
   margin-bottom: 5px;
+  color: #333;
+  margin-top:0;
+  line-height:2.4;
 }
 
-.status {
-  color: #ff4d6d;
-}
-
-.time {
-  color: #555;
-}
-
-/* Metrics Section */
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
-  gap: 15px; /* Spacing between the boxes */
-}
-
-.metric.wait-time {
-  width: 100%; /* Make the box responsive to the grid */
-  height: auto;
-  aspect-ratio: 1; /* Ensures the boxes are square */
-  background: rgba(210, 65, 110, 0.1); /* Light red background */
-  text-align: center;
-  border-radius: 1.25rem; /* Rounded corners */
-  padding: 0px; /* Internal padding for content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  flex-direction: column; /* Align content vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-}
-
-/* Metric Title (h3) */
-.metric.wai-time h3 {
-  font-size: 1rem; /* Adjusted for better readability */
-  margin-bottom: 5px; /* Space below the title */
-  font-weight: 500; /* Semi-bold */
-  color: #d2416e; /* Neutral text color */
-}
-
-/* Metric Content (p) */
-.metric.wait-time p {
-  font-size: 1.5rem; /* Slightly larger for emphasis */
-  font-weight: bold;
-  color: #d2416e; /* Default text color for the metrics */
-  margin: 0; /* Remove default margin */
-}
-
-/* Highlighted Text */
-.metric.wait-time .highlight {
-  font-size: 2rem; /* Larger for emphasis */
-  color: #d2416e; /* Makes the number (e.g., "15") red */
-}
-
-/* Specific Adjustments for Icons */
-.metric .icon {
-  font-size: 2rem; /* Larger icons */
-  color: #002148; /* Dark blue for icons */
-}
-
-.metric.queue {
-  width: 100%; /* Make the box responsive to the grid */
-  height: auto;
-  aspect-ratio: 1; /* Ensures the boxes are square */
-  background: rgba(112, 66, 201, 0.1); /* Light purple background */
-  text-align: center;
-  border-radius: 1.25rem; /* Rounded corners */
-  padding: 0px; /* Internal padding for content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  flex-direction: column; /* Align content vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-}
-
-/* Metric Title (h3) */
-.metric.queue h3 {
-  font-size: 1rem; /* Adjusted for better readability */
-  margin-bottom: 5px; /* Space below the title */
-  font-weight: 500; /* Semi-bold */
-  color: #7042c9; /* Purple text color for the title */
-}
-
-/* Metric Content (p) */
-.metric.queue p {
-  font-size: 1.5rem; /* Slightly larger for emphasis */
-  font-weight: bold;
-  color: #7042c9; /* Purple text color for the metrics */
-  margin: 0; /* Remove default margin */
-}
-
-/* Highlighted Text */
-.metric.queue .highlight {
-  font-size: 2rem; /* Larger for emphasis */
-  color: #7042c9; /* Makes the number (e.g., "24") purple */
-}
-
-.metric.map {
-  width: 100%; /* Make the box responsive to the grid */
-  height: auto;
-  aspect-ratio: 1; /* Ensures the boxes are square */
-  background: rgba(13, 177, 173, 0.1); /* Light teal background */
-  text-align: center;
-  border-radius: 1.25rem; /* Rounded corners */
-  padding: 0px; /* Internal padding for content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  flex-direction: column; /* Align content vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-}
-
-/* Metric Title (h3) */
-.metric.map h3 {
-  font-size: 1rem; /* Adjusted for better readability */
-  margin-bottom: 5px; /* Space below the title */
-  font-weight: 500; /* Semi-bold */
-  color: #0db1ad; /* Teal text color for the title */
-}
-
-/* Icon in the Map Box */
-.metric.map .icon {
-  font-size: 2rem; /* Larger icon size */
-  color: #0db1ad; /* Makes the icon teal */
-  margin-top: 5px; /* Adds slight spacing from the title */
-}
-.metric.questions {
-  width: 100%; /* Make the box responsive to the grid */
-  height: auto;
-  aspect-ratio: 1; /* Ensures the boxes are square */
-  background: rgba(25, 123, 210, 0.1); /* Light blue background */
-  text-align: center;
-  border-radius: 1.25rem; /* Rounded corners */
-  padding: 0px; /* Internal padding for content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  flex-direction: column; /* Align content vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-}
-
-/* Metric Title (h3) */
-.metric.questions h3 {
-  font-size: 1rem; /* Adjusted for better readability */
-  margin-bottom: 5px; /* Space below the title */
-  font-weight: 500; /* Semi-bold */
-  color: #197bd2; /* Yellow text color for the title */
-}
-
-/* Icon in the Questions Box */
-.metric.questions .icon {
-  font-size: 2rem; /* Larger icon size */
-  color: #197bd2; /* Makes the icon yellow */
-  margin-top: 5px; /* Adds slight spacing from the title */
+.path-progress p {
+  margin: 0; /* Remove extra margins for <p> tags, if used */
+  line-height: 2.3; /* Match line height for consistent spacing */
 }
 
 /* Timeline Container */
-/* Timeline Container (Vertical) */
 .timeline-container-vertical {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   margin: 0 auto;
-  padding: 1px 0;
-  width: 200px;
-  margin-left: 10px;
-  /* Smaller width */
 }
 
-/* Individual Timeline Step (Vertical) */
+/* Timeline Step */
 .timeline-step-vertical {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 1px; /* Reduce space between steps */
+  margin-bottom: 0px;
 }
 
 .timeline-step-info {
   margin-left: 10px;
 }
 
-/* Step Name and Time Styling */
 .timeline-step-name {
-  font-size: 12px; /* Smaller font size */
+  font-size: 0.9rem;
   color: #333;
 }
 
 /* Outer Circle */
 .timeline-outer-circle {
-  width: 6px; /* Slightly larger size */
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 1px solid #ccc; /* Make the border slightly thicker */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 2px solid #ccc;
+  background-color: white;
+  position: relative;
+  z-index: 2;
 }
 
-/* Inner Circle */
-.timeline-inner-circle {
-  width: 3px; /* Slightly larger size */
-  height: 3px;
-  border-radius: 50%;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
+/* Connecting Line */
+.timeline-line-vertical {
+  position: absolute;
+  top: 12px; /* Start below the circle */
+  left: 5px;
+  width: 2px;
+  height: 30px;
+  background-color: #ccc;
+  z-index: 1;
 }
 
-/* Inner circle lights up for the current step */
-.timeline-inner-circle.current {
-  background-color: blue;
+.timeline-line-vertical.completed {
+  background-color: rgb(12, 93, 170);
 }
 
-/* Status-based Outer Circle Styling */
+.timeline-line-vertical.upcoming {
+  background-color: #ccc;
+}
+
+/* Circle Status */
 .timeline-outer-circle.completed {
-  border-color: rgb(0, 30, 128);
+  border-color: rgb(12, 93, 170);
 }
 
 .timeline-outer-circle.current {
-  border-color: blue;
+  border-color: #1550A9;
 }
 
 .timeline-outer-circle.upcoming {
   border-color: #ccc;
 }
 
-/* Connecting Line (Vertical) */
-.timeline-line-vertical {
-  position: absolute;
-  top: 3px; /* Adjust positioning for better visibility */
-  left: 3px; /* Center line with circles */
-  width: 1px; /* Thicker line for better visibility */
-  height: 10px; /* Increase line height to make it more visible */
-  background-color: #ccc; /* Default color */
+/* Inner Circle */
+.timeline-inner-circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
-.timeline-line-vertical.completed {
-  background-color: green; /* Make completed line more visible */
+.timeline-inner-circle.current {
+  background-color: blue;
+}
+
+/* .timeline-line-vertical.completed {
+  background-color: green;
 }
 
 .timeline-line-vertical.upcoming {
   background-color: #ccc;
+} */
+
+
+/* Connecting Line (Vertical) */
+/* .timeline-line-vertical {
+  position: absolute;
+  top: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 2px;
+  height: 20px; 
+  background-color: #ccc; 
+  z-index: 0; 
+} */
+
+/* Line Colors Based on Status */
+/* .timeline-line-vertical.completed {
+  background-color: green;
+}
+
+.timeline-line-vertical.upcoming {
+  background-color: #ccc;
+} */
+
+/* Metrics Section */
+.metrics {
+  font-family: "DM Sans";
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 20px; /* Spacing between the boxes */
+}
+
+.metric {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metric h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.metric p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.metric .highlight {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "DM Sans";
+}
+
+/* Wait Time Metric */
+.metric.wait-time {
+  background: rgba(210, 65, 110, 0.1); /* Light red background */
+}
+
+.metric.wait-time .highlight {
+  color: #d2416e;
+}
+
+/* Queue Metric */
+.metric.queue {
+  background: rgba(112, 66, 201, 0.1); /* Light purple background */
+}
+
+.metric.queue h3 {
+  color: #7042c9;
+}
+.metric.queue p{
+  font-weight:500;
+}
+
+.metric.queue .highlight {
+  color: #7042c9;
+}
+
+.metric.queue p {
+  color: #7042c9; /* Make "in line" purple like the lightning bolt */
+}
+
+/* Map Metric */
+.metric.map {
+  background: rgba(13, 177, 173, 0.1); /* Light teal background */
+}
+
+.metric.map h3 {
+  color: #0db1ad;
+}
+
+.metric.map .icon-large {
+  font-size: 3rem; /* Make map icon bigger */
+}
+
+/* Questions Metric */
+.metric.questions {
+  background: rgba(25, 123, 210, 0.1); /* Light blue background */
+}
+
+.metric.questions h3 {
+  color: #197bd2;
+}
+
+.metric.questions .icon-large {
+  font-size: 3rem; /* Make questions icon bigger */
+}
+
+/* Icon Styling */
+.icon-large {
+  font-size: 2.5rem; /* Larger icons by default */
+  margin-bottom: 5px;
+  color: inherit; /* Match the parent text color */
+}
+
+.labwork-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d2416e;
+}
+
+.queue-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7042c9;
+}
+
+.map-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0db1ad;
+}
+
+.question-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #197bd2;
+}
+
+.icon-xlarge-map {
+  font-size: 3rem; /* Larger icons by default */
+  margin-bottom: 5px;
+  color: #0db1ad; /* Match the parent text color */
+
+}
+
+
+.icon-xlarge-q {
+  font-size: 3rem; /* Larger icons by default */
+  margin-bottom: 5px;
+  color: #197bd2; /* Match the parent text color */
+}
+
+.metric h1 {
+  display: flex;
+  align-items: center; /* Vertically align the icon and text */
+  justify-content: flex-start; /* Left-align the content */
+  font-size: 1.3rem; /* Maintain font size for headers */
+  font-weight: 500;
+  line-height:normal;
+  font-style:normal;
+  width:100%;
+  margin: 0.5; 
+  margin-top:0px;/* Remove default margin */
+}
+
+.labwork-title {
+  
+  color: #d2416e; /* Specific color for Lab Work */
+}
+
+.queue-title {
+  color: #7042c9; /* Specific color for Queue */
+}
+
+.metric h1 .icon-large {
+  margin-right: 10px; /* Add spacing between the icon and the text */
+  font-size: 2rem; /* Adjust icon size if needed */
+  color: inherit; /* Keep the icon's color aligned with the text */
+}
+.Peoplepic {
+  flex-shrink: 0;
+  height:auto;
+  max-width: 100px; 
+  margin-top: 80px;;/* Set a maximum width for the image */
+
+   /* Prevent the image from shrinking */
+}
+.path-progress-container{
+  justify-content: space-between;
+  display: flex;
 }
