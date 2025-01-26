@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signin from "./Signin";
 import Home from "./Home";
 import Qbuddy from "./Qbuddy";
-import TestFetch from "./testFetch"; // Correctly imported
+import TestFetch from "./Fetch"; // Correctly imported
 
 export default function App() {
   const [patientData, setPatientData] = useState(null);
