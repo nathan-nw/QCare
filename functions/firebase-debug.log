@@ -1,0 +1,3341 @@
+[debug] [2025-01-25T22:28:21.392Z] ----------------------------------------------------------------------
+[debug] [2025-01-25T22:28:21.393Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2025-01-25T22:28:21.394Z] CLI Version:   13.29.2
+[debug] [2025-01-25T22:28:21.394Z] Platform:      darwin
+[debug] [2025-01-25T22:28:21.394Z] Node Version:  v20.18.0
+[debug] [2025-01-25T22:28:21.394Z] Time:          Sat Jan 25 2025 17:28:21 GMT-0500 (Eastern Standard Time)
+[debug] [2025-01-25T22:28:21.394Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-25T22:28:21.493Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-25T22:28:21.493Z] > authorizing via signed-in user (millicentsong@gmail.com)
+[debug] [2025-01-25T22:28:21.493Z] [iam] checking project qcare-b7741 for permissions ["firebase.projects.get"]
+[debug] [2025-01-25T22:28:21.493Z] Checked if tokens are valid: true, expires at: 1737846761230
+[debug] [2025-01-25T22:28:21.493Z] Checked if tokens are valid: true, expires at: 1737846761230
+[debug] [2025-01-25T22:28:21.494Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions [none]
+[debug] [2025-01-25T22:28:21.494Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions x-goog-quota-user=projects/qcare-b7741
+[debug] [2025-01-25T22:28:21.494Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-25T22:28:21.870Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions 200
+[debug] [2025-01-25T22:28:21.871Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-25T22:28:21.871Z] Checked if tokens are valid: true, expires at: 1737846761230
+[debug] [2025-01-25T22:28:21.872Z] Checked if tokens are valid: true, expires at: 1737846761230
+[debug] [2025-01-25T22:28:21.872Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741 [none]
+[debug] [2025-01-25T22:28:21.972Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741 200
+[debug] [2025-01-25T22:28:21.972Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741 {"projectNumber":"252454746421","projectId":"qcare-b7741","lifecycleState":"ACTIVE","name":"QCare","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-01-25T21:58:48.941660Z"}
+[debug] [2025-01-25T22:28:21.976Z] defaultcredentials: writing to file /Users/millicentsong/.config/firebase/millicentsong_gmail_com_application_default_credentials.json
+[debug] [2025-01-25T22:28:21.977Z] Setting GAC to /Users/millicentsong/.config/firebase/millicentsong_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/millicentsong/.config/firebase/millicentsong_gmail_com_application_default_credentials.json"}}
+[debug] [2025-01-25T22:28:21.977Z] Checked if tokens are valid: true, expires at: 1737846761230
+[debug] [2025-01-25T22:28:21.977Z] Checked if tokens are valid: true, expires at: 1737846761230
+[debug] [2025-01-25T22:28:21.977Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/qcare-b7741/adminSdkConfig [none]
+[debug] [2025-01-25T22:28:22.535Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/qcare-b7741/adminSdkConfig 200
+[debug] [2025-01-25T22:28:22.535Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/qcare-b7741/adminSdkConfig {"projectId":"qcare-b7741","storageBucket":"qcare-b7741.firebasestorage.app"}
+[info] i  functions: Watching "/Users/millicentsong/QCare/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/millicentsong/QCare/functions\" for Cloud Functions..."}}
+[debug] [2025-01-25T22:28:22.560Z] Validating nodejs source
+[debug] [2025-01-25T22:28:22.797Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:28:22.797Z] Building nodejs source
+[debug] [2025-01-25T22:28:22.797Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:28:22.798Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:28:22.800Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8853
+
+[debug] [2025-01-25T22:28:23.024Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:29:47.820Z] File /Users/millicentsong/QCare/functions/package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/package-lock.json changed, reloading triggers"}}
+[debug] [2025-01-25T22:29:47.821Z] File /Users/millicentsong/QCare/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/package.json changed, reloading triggers"}}
+[debug] [2025-01-25T22:29:48.822Z] Validating nodejs source
+[debug] [2025-01-25T22:29:49.106Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:29:49.106Z] Building nodejs source
+[debug] [2025-01-25T22:29:49.106Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:29:49.106Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:29:49.107Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8095
+
+[debug] [2025-01-25T22:29:49.251Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:32:35.431Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:32:36.433Z] Validating nodejs source
+[debug] [2025-01-25T22:32:36.755Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:32:36.755Z] Building nodejs source
+[debug] [2025-01-25T22:32:36.755Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:32:36.755Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:32:36.756Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8950
+
+[debug] [2025-01-25T22:32:36.898Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:32:42.101Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:32:43.103Z] Validating nodejs source
+[debug] [2025-01-25T22:32:43.395Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:32:43.395Z] Building nodejs source
+[debug] [2025-01-25T22:32:43.395Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:32:43.395Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:32:43.396Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8316
+
+[debug] [2025-01-25T22:32:43.499Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:32:49.048Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:32:50.050Z] Validating nodejs source
+[debug] [2025-01-25T22:32:50.318Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:32:50.318Z] Building nodejs source
+[debug] [2025-01-25T22:32:50.318Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:32:50.318Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:32:50.319Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8597
+
+[error] TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+    at Module.require (node:internal/modules/cjs/loader:1306:11)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:10:19)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16) {
+  code: 'ERR_INVALID_ARG_VALUE'
+}
+
+[debug] [2025-01-25T22:32:50.382Z] Got response code 400; body Failed to generate manifest from function source: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[debug] [2025-01-25T22:32:51.532Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:32:52.533Z] Validating nodejs source
+[debug] [2025-01-25T22:32:52.781Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:32:52.781Z] Building nodejs source
+[debug] [2025-01-25T22:32:52.781Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:32:52.781Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:32:52.782Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8047
+
+[debug] [2025-01-25T22:32:52.926Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-01-25T22:32:53.890Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:32:54.891Z] Validating nodejs source
+[debug] [2025-01-25T22:32:55.163Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:32:55.164Z] Building nodejs source
+[debug] [2025-01-25T22:32:55.164Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:32:55.164Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:32:55.164Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8079
+
+[debug] [2025-01-25T22:32:55.278Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-01-25T22:32:55.568Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:32:56.570Z] Validating nodejs source
+[debug] [2025-01-25T22:32:56.912Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:32:56.912Z] Building nodejs source
+[debug] [2025-01-25T22:32:56.912Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:32:56.912Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:32:56.912Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] Serving at port 8862
+
+[debug] [2025-01-25T22:32:57.034Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:33:00.444Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:33:01.446Z] Validating nodejs source
+[debug] [2025-01-25T22:33:01.714Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:33:01.714Z] Building nodejs source
+[debug] [2025-01-25T22:33:01.714Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:33:01.714Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:33:01.715Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8070
+
+[debug] [2025-01-25T22:33:01.841Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-01-25T22:33:04.137Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:33:05.140Z] Validating nodejs source
+[debug] [2025-01-25T22:33:05.413Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:33:05.413Z] Building nodejs source
+[debug] [2025-01-25T22:33:05.413Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:33:05.414Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:33:05.414Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8361
+
+[debug] [2025-01-25T22:33:05.534Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:33:08.645Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:33:09.647Z] Validating nodejs source
+[debug] [2025-01-25T22:33:09.964Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:33:09.964Z] Building nodejs source
+[debug] [2025-01-25T22:33:09.964Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:33:09.965Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:33:09.965Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8445
+
+[debug] [2025-01-25T22:33:10.090Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-01-25T22:33:13.597Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:33:14.599Z] Validating nodejs source
+[debug] [2025-01-25T22:33:14.855Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:33:14.856Z] Building nodejs source
+[debug] [2025-01-25T22:33:14.856Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:33:14.856Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:33:14.856Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8156
+
+[debug] [2025-01-25T22:33:14.980Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:33:21.418Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:33:22.420Z] Validating nodejs source
+[debug] [2025-01-25T22:33:22.676Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:33:22.676Z] Building nodejs source
+[debug] [2025-01-25T22:33:22.676Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:33:22.676Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:33:22.677Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8974
+
+[error] /Users/millicentsong/QCare/functions/index.js:20
+const GITHUB_A
+      ^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:33:22.740Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing initializer in const declaration
+[debug] [2025-01-25T22:33:23.082Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:33:24.083Z] Validating nodejs source
+[debug] [2025-01-25T22:33:24.336Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:33:24.336Z] Building nodejs source
+[debug] [2025-01-25T22:33:24.336Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:33:24.336Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:33:24.337Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8239
+
+[debug] [2025-01-25T22:33:24.458Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2025-01-25T22:54:09.280Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:54:10.285Z] Validating nodejs source
+[debug] [2025-01-25T22:54:10.626Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:54:10.626Z] Building nodejs source
+[debug] [2025-01-25T22:54:10.626Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:54:10.627Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:54:10.627Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8316
+
+[error] ReferenceError: admin is not defined
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:17:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:54:10.836Z] Got response code 400; body Failed to generate manifest from function source: ReferenceError: admin is not defined
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:54:17.289Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:54:18.292Z] Validating nodejs source
+[debug] [2025-01-25T22:54:18.577Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:54:18.577Z] Building nodejs source
+[debug] [2025-01-25T22:54:18.577Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:54:18.578Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:54:18.578Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8126
+
+[error] /Users/millicentsong/QCare/functions/index.js:11
+const {generateMockPatient}; 
+      ^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in destructuring declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:54:18.637Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing initializer in destructuring declaration
+[debug] [2025-01-25T22:54:20.191Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:54:21.193Z] Validating nodejs source
+[debug] [2025-01-25T22:54:21.500Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:54:21.500Z] Building nodejs source
+[debug] [2025-01-25T22:54:21.500Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:54:21.501Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:54:21.502Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8763
+
+[error] Error: Cannot find module './mocks'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/millicentsong/QCare/functions/index.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2025-01-25T22:54:21.614Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module './mocks'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:54:23.723Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:54:24.725Z] Validating nodejs source
+[debug] [2025-01-25T22:54:24.975Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:54:24.975Z] Building nodejs source
+[debug] [2025-01-25T22:54:24.975Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:54:24.975Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:54:24.976Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[debug] [2025-01-25T22:54:24.977Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[info] Serving at port 8928
+
+[error] Error: Cannot find module '..'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/millicentsong/QCare/functions/index.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2025-01-25T22:54:25.091Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '..'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:54:25.978Z] Validating nodejs source
+[debug] [2025-01-25T22:54:26.241Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:54:26.241Z] Building nodejs source
+[debug] [2025-01-25T22:54:26.241Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:54:26.241Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:54:26.242Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8260
+
+[error] Error: Cannot find module '..'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/millicentsong/QCare/functions/index.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2025-01-25T22:54:26.350Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '..'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:04.683Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:55:05.685Z] Validating nodejs source
+[debug] [2025-01-25T22:55:06.073Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:06.073Z] Building nodejs source
+[debug] [2025-01-25T22:55:06.073Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:06.074Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:06.074Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8924
+
+[error] Error: Cannot find module '../'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/millicentsong/QCare/functions/index.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2025-01-25T22:55:06.270Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '../'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:11.321Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:55:12.323Z] Validating nodejs source
+[debug] [2025-01-25T22:55:12.611Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:12.611Z] Building nodejs source
+[debug] [2025-01-25T22:55:12.611Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:12.611Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:12.611Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8954
+
+[error] Error: Cannot find module '../Backend'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/millicentsong/QCare/functions/index.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2025-01-25T22:55:12.723Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '../Backend'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[debug] [2025-01-25T22:55:14.327Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:55:15.329Z] Validating nodejs source
+[debug] [2025-01-25T22:55:15.569Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:15.569Z] Building nodejs source
+[debug] [2025-01-25T22:55:15.569Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:15.569Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:15.569Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8742
+
+[error] Error: Cannot find module '../Backend'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/millicentsong/QCare/functions/index.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2025-01-25T22:55:15.682Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '../Backend'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:17.180Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:55:18.182Z] Validating nodejs source
+[debug] [2025-01-25T22:55:18.431Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:18.431Z] Building nodejs source
+[debug] [2025-01-25T22:55:18.431Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:18.431Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:18.432Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8772
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T22:55:18.548Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:22.269Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:23.271Z] Validating nodejs source
+[debug] [2025-01-25T22:55:23.520Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:23.520Z] Building nodejs source
+[debug] [2025-01-25T22:55:23.520Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:23.521Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:23.521Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8578
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T22:55:23.630Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[debug] [2025-01-25T22:55:26.952Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:27.954Z] Validating nodejs source
+[debug] [2025-01-25T22:55:28.218Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:28.219Z] Building nodejs source
+[debug] [2025-01-25T22:55:28.219Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:28.219Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:28.219Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8630
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T22:55:28.333Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[debug] [2025-01-25T22:55:28.421Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:55:29.423Z] Validating nodejs source
+[debug] [2025-01-25T22:55:29.679Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:29.679Z] Building nodejs source
+[debug] [2025-01-25T22:55:29.679Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:29.679Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:29.679Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8619
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T22:55:29.791Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[debug] [2025-01-25T22:55:31.398Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:32.400Z] Validating nodejs source
+[debug] [2025-01-25T22:55:32.643Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:32.643Z] Building nodejs source
+[debug] [2025-01-25T22:55:32.643Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:32.643Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:32.644Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8234
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T22:55:32.756Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:34.558Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:55:35.559Z] Validating nodejs source
+[debug] [2025-01-25T22:55:35.892Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:35.893Z] Building nodejs source
+[debug] [2025-01-25T22:55:35.893Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:35.893Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:35.893Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8822
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T22:55:36.005Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[debug] [2025-01-25T22:55:36.297Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:37.297Z] Validating nodejs source
+[debug] [2025-01-25T22:55:37.534Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:37.534Z] Building nodejs source
+[debug] [2025-01-25T22:55:37.534Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:37.534Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:37.534Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8002
+
+[debug] [2025-01-25T22:55:37.836Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] /Users/millicentsong/QCare/functions/index.js:30
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:55:38.595Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[debug] [2025-01-25T22:55:38.838Z] Validating nodejs source
+[debug] [2025-01-25T22:55:39.096Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:39.096Z] Building nodejs source
+[debug] [2025-01-25T22:55:39.096Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:39.096Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:39.097Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8342
+
+[error] /Users/millicentsong/QCare/functions/index.js:30
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:55:39.182Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[debug] [2025-01-25T22:55:39.602Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:40.603Z] Validating nodejs source
+[debug] [2025-01-25T22:55:40.867Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:40.867Z] Building nodejs source
+[debug] [2025-01-25T22:55:40.867Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:40.867Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:40.867Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8151
+
+[error] /Users/millicentsong/QCare/functions/index.js:16
+const {onRequest} = require("firebase-functions/v2/https");
+^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:55:40.938Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'const'
+[debug] [2025-01-25T22:55:41.977Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:42.979Z] Validating nodejs source
+[debug] [2025-01-25T22:55:43.286Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:43.286Z] Building nodejs source
+[debug] [2025-01-25T22:55:43.286Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:43.286Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:43.287Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] Serving at port 8642
+
+[error] /Users/millicentsong/QCare/functions/index.js:14
+    try{}
+        ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:55:43.348Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing catch or finally after try
+[debug] [2025-01-25T22:55:44.196Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:45.197Z] Validating nodejs source
+[debug] [2025-01-25T22:55:45.533Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:45.533Z] Building nodejs source
+[debug] [2025-01-25T22:55:45.533Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:45.533Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:45.534Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8933
+
+[error] /Users/millicentsong/QCare/functions/index.js:16
+    }
+    ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:55:45.598Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing catch or finally after try
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:55:56.745Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:55:57.747Z] Validating nodejs source
+[debug] [2025-01-25T22:55:57.997Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:55:57.997Z] Building nodejs source
+[debug] [2025-01-25T22:55:57.997Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:55:57.997Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:55:57.997Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8696
+
+[error] /Users/millicentsong/QCare/functions/index.js:16
+    }
+    ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:55:58.055Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing catch or finally after try
+[debug] [2025-01-25T22:55:59.008Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:00.009Z] Validating nodejs source
+[debug] [2025-01-25T22:56:00.245Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:00.245Z] Building nodejs source
+[debug] [2025-01-25T22:56:00.245Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:00.245Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:00.246Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8224
+
+[error] /Users/millicentsong/QCare/functions/index.js:16
+    }
+    ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:00.304Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing catch or finally after try
+[debug] [2025-01-25T22:56:00.951Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:01.953Z] Validating nodejs source
+[debug] [2025-01-25T22:56:02.198Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:02.198Z] Building nodejs source
+[debug] [2025-01-25T22:56:02.198Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:02.199Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:02.199Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] Serving at port 8491
+
+[error] /Users/millicentsong/QCare/functions/index.js:16
+    }
+    ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:02.260Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing catch or finally after try
+[debug] [2025-01-25T22:56:03.106Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:04.107Z] Validating nodejs source
+[debug] [2025-01-25T22:56:04.344Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:04.344Z] Building nodejs source
+[debug] [2025-01-25T22:56:04.344Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:04.345Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:04.345Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] Serving at port 8544
+
+[error] /Users/millicentsong/QCare/functions/index.js:17
+    }
+    ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:04.404Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token '}'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:56:10.200Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:11.202Z] Validating nodejs source
+[debug] [2025-01-25T22:56:11.444Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:11.445Z] Building nodejs source
+[debug] [2025-01-25T22:56:11.445Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:11.445Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:11.445Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8687
+
+[error] /Users/millicentsong/QCare/functions/index.js:17
+    }
+    ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:11.502Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing catch or finally after try
+[debug] [2025-01-25T22:56:12.655Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:13.675Z] Validating nodejs source
+[debug] [2025-01-25T22:56:13.897Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:13.897Z] Building nodejs source
+[debug] [2025-01-25T22:56:13.897Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:13.898Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:13.898Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8253
+
+[error] /Users/millicentsong/QCare/functions/index.js:18
+    }
+    ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:13.958Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing catch or finally after try
+[debug] [2025-01-25T22:56:14.301Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:15.303Z] Validating nodejs source
+[debug] [2025-01-25T22:56:15.819Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:15.819Z] Building nodejs source
+[debug] [2025-01-25T22:56:15.819Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:15.820Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:15.820Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] Serving at port 8294
+
+[error] /Users/millicentsong/QCare/functions/index.js:17
+    }
+    ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:15.881Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing catch or finally after try
+[debug] [2025-01-25T22:56:16.224Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:17.226Z] Validating nodejs source
+[debug] [2025-01-25T22:56:17.473Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:17.473Z] Building nodejs source
+[debug] [2025-01-25T22:56:17.473Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:17.473Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:17.474Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8555
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] /Users/millicentsong/QCare/functions/index.js:35
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:18.540Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[debug] [2025-01-25T22:56:18.584Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:19.586Z] Validating nodejs source
+[debug] [2025-01-25T22:56:19.825Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:19.825Z] Building nodejs source
+[debug] [2025-01-25T22:56:19.825Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:19.826Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:19.826Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8165
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] /Users/millicentsong/QCare/functions/index.js:35
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:19.886Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:56:22.651Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:23.653Z] Validating nodejs source
+[debug] [2025-01-25T22:56:23.918Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:23.918Z] Building nodejs source
+[debug] [2025-01-25T22:56:23.918Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:23.918Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:23.919Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] Serving at port 8057
+
+[error] /Users/millicentsong/QCare/functions/index.js:35
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:23.986Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[debug] [2025-01-25T22:56:26.846Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:27.847Z] Validating nodejs source
+[debug] [2025-01-25T22:56:28.111Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:28.111Z] Building nodejs source
+[debug] [2025-01-25T22:56:28.111Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:28.111Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:28.112Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] Serving at port 8538
+
+[error] /Users/millicentsong/QCare/functions/index.js:35
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:28.172Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:56:33.766Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:34.768Z] Validating nodejs source
+[debug] [2025-01-25T22:56:35.144Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:35.144Z] Building nodejs source
+[debug] [2025-01-25T22:56:35.144Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:35.144Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:35.145Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8366
+
+[error] /Users/millicentsong/QCare/functions/index.js:35
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:35.213Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[debug] [2025-01-25T22:56:37.065Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:38.067Z] Validating nodejs source
+[debug] [2025-01-25T22:56:38.355Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:38.355Z] Building nodejs source
+[debug] [2025-01-25T22:56:38.355Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:38.355Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:38.356Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8853
+
+[error] /Users/millicentsong/QCare/functions/index.js:36
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:38.418Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:56:42.190Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:56:43.192Z] Validating nodejs source
+[debug] [2025-01-25T22:56:43.518Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:43.518Z] Building nodejs source
+[debug] [2025-01-25T22:56:43.518Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:43.518Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:43.519Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8045
+
+[error] /Users/millicentsong/QCare/functions/index.js:36
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:43.578Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[debug] [2025-01-25T22:56:44.428Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:45.431Z] Validating nodejs source
+[debug] [2025-01-25T22:56:45.682Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:45.682Z] Building nodejs source
+[debug] [2025-01-25T22:56:45.682Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:45.683Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:45.683Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8423
+
+[error] /Users/millicentsong/QCare/functions/index.js:36
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:45.748Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:56:48.309Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:49.310Z] Validating nodejs source
+[debug] [2025-01-25T22:56:49.567Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:49.567Z] Building nodejs source
+[debug] [2025-01-25T22:56:49.567Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:49.567Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:49.567Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8948
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[error] /Users/millicentsong/QCare/functions/index.js:19
+        response.status(500).send(");
+                                  ^^^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:50.629Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Invalid or unexpected token
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:56:56.735Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:56:57.736Z] Validating nodejs source
+[debug] [2025-01-25T22:56:58.001Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:56:58.001Z] Building nodejs source
+[debug] [2025-01-25T22:56:58.001Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:56:58.001Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:56:58.001Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8866
+
+[error] /Users/millicentsong/QCare/functions/index.js:36
+
+
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at loadModule (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js:157:23)
+    at /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2025-01-25T22:56:58.065Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected end of input
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:57:08.396Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:57:09.399Z] Validating nodejs source
+[debug] [2025-01-25T22:57:09.744Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:57:09.744Z] Building nodejs source
+[debug] [2025-01-25T22:57:09.744Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:57:09.744Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:57:09.744Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8209
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T22:57:09.861Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T22:57:14.390Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T22:57:15.393Z] Validating nodejs source
+[debug] [2025-01-25T22:57:15.657Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T22:57:15.657Z] Building nodejs source
+[debug] [2025-01-25T22:57:15.657Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T22:57:15.657Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T22:57:15.657Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8002
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T22:57:15.770Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:16:27.814Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T23:16:28.815Z] Validating nodejs source
+[debug] [2025-01-25T23:16:29.245Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:16:29.246Z] Building nodejs source
+[debug] [2025-01-25T23:16:29.246Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:16:29.246Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:16:29.246Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8216
+
+[error] /Users/millicentsong/QCare/Backend/src/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T23:16:29.479Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:17:24.755Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T23:17:25.757Z] Validating nodejs source
+[debug] [2025-01-25T23:17:26.061Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:17:26.061Z] Building nodejs source
+[debug] [2025-01-25T23:17:26.061Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:17:26.061Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:17:26.062Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8510
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T23:17:26.250Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:18:47.923Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T23:18:48.925Z] Validating nodejs source
+[debug] [2025-01-25T23:18:49.245Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:18:49.245Z] Building nodejs source
+[debug] [2025-01-25T23:18:49.245Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:18:49.245Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:18:49.245Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8796
+
+[error] Error: Cannot find module '../ifem_award_mchacks_2025/javascript/patients'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/millicentsong/QCare/functions/index.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2025-01-25T23:18:49.442Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '../ifem_award_mchacks_2025/javascript/patients'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:19:04.785Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T23:19:05.787Z] Validating nodejs source
+[debug] [2025-01-25T23:19:06.039Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:19:06.039Z] Building nodejs source
+[debug] [2025-01-25T23:19:06.039Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:19:06.039Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:19:06.039Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8196
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T23:19:06.149Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[debug] [2025-01-25T23:19:06.444Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T23:19:07.445Z] Validating nodejs source
+[debug] [2025-01-25T23:19:07.706Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:19:07.706Z] Building nodejs source
+[debug] [2025-01-25T23:19:07.706Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:19:07.706Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:19:07.707Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8224
+
+[error] Error: Cannot find module '../Backend/patientsifem_award_mchacks_2025/javascript/patients'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/millicentsong/QCare/functions/index.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js',
+    '/Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js'
+  ]
+}
+
+[debug] [2025-01-25T23:19:07.819Z] Got response code 400; body Failed to generate manifest from function source: Error: Cannot find module '../Backend/patientsifem_award_mchacks_2025/javascript/patients'
+Require stack:
+- /Users/millicentsong/QCare/functions/index.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/runtime/loader.js
+- /Users/millicentsong/QCare/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:19:11.444Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:19:12.446Z] Validating nodejs source
+[debug] [2025-01-25T23:19:12.799Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:19:12.799Z] Building nodejs source
+[debug] [2025-01-25T23:19:12.799Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:19:12.800Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:19:12.800Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8468
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T23:19:12.923Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:24:12.821Z] File /Users/millicentsong/QCare/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/package.json changed, reloading triggers"}}
+[debug] [2025-01-25T23:24:13.826Z] Validating nodejs source
+[debug] [2025-01-25T23:24:14.192Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:24:14.192Z] Building nodejs source
+[debug] [2025-01-25T23:24:14.192Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:24:14.193Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:24:14.193Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8784
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T23:24:14.422Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[debug] [2025-01-25T23:24:17.421Z] File /Users/millicentsong/QCare/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/package.json changed, reloading triggers"}}
+[debug] [2025-01-25T23:24:18.422Z] Validating nodejs source
+[debug] [2025-01-25T23:24:18.673Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:24:18.673Z] Building nodejs source
+[debug] [2025-01-25T23:24:18.673Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:24:18.673Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:24:18.673Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[info] Serving at port 8030
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T23:24:18.920Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:25:39.903Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T23:25:40.904Z] Validating nodejs source
+[debug] [2025-01-25T23:25:41.286Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:25:41.286Z] Building nodejs source
+[debug] [2025-01-25T23:25:41.286Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:25:41.286Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:25:41.287Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8181
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T23:25:41.504Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-25T23:26:10.456Z] File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/millicentsong/QCare/functions/index.js changed, reloading triggers"}}
+[debug] [2025-01-25T23:26:11.457Z] Validating nodejs source
+[debug] [2025-01-25T23:26:12.093Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-25T23:26:12.093Z] Building nodejs source
+[debug] [2025-01-25T23:26:12.093Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2025-01-25T23:26:12.093Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-25T23:26:12.094Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8515
+
+[error] /Users/millicentsong/QCare/Backend/ifem_award_mchacks_2025/javascript/patients.js:1
+export const PatientPhase = {
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/millicentsong/QCare/functions/index.js:11:31)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+
+[debug] [2025-01-25T23:26:12.210Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Unexpected token 'export'
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2025-01-26T06:06:04.119Z] ----------------------------------------------------------------------
+[debug] [2025-01-26T06:06:04.120Z] Command:       /usr/local/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2025-01-26T06:06:04.120Z] CLI Version:   13.29.2
+[debug] [2025-01-26T06:06:04.120Z] Platform:      darwin
+[debug] [2025-01-26T06:06:04.120Z] Node Version:  v20.18.0
+[debug] [2025-01-26T06:06:04.120Z] Time:          Sun Jan 26 2025 01:06:04 GMT-0500 (Eastern Standard Time)
+[debug] [2025-01-26T06:06:04.120Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-26T06:06:04.197Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-26T06:06:04.197Z] > authorizing via signed-in user (millicentsong@gmail.com)
+[debug] [2025-01-26T06:06:04.197Z] [iam] checking project qcare-b7741 for permissions ["firebase.projects.get"]
+[debug] [2025-01-26T06:06:04.198Z] Checked if tokens are valid: false, expires at: 1737863838911
+[debug] [2025-01-26T06:06:04.198Z] Checked if tokens are valid: false, expires at: 1737863838911
+[debug] [2025-01-26T06:06:04.198Z] > refreshing access token with scopes: []
+[debug] [2025-01-26T06:06:04.198Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-01-26T06:06:04.198Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-26T06:06:04.337Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-01-26T06:06:04.337Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-26T06:06:04.346Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions [none]
+[debug] [2025-01-26T06:06:04.346Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions x-goog-quota-user=projects/qcare-b7741
+[debug] [2025-01-26T06:06:04.346Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-01-26T06:06:04.585Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions 200
+[debug] [2025-01-26T06:06:04.586Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/qcare-b7741:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] ⚠  functions: Functions Emulator unable to start on port 5000, starting on 5001 instead. {"metadata":{"emulator":{"name":"functions"},"message":"Functions Emulator unable to start on port 5000, starting on 5001 instead."}}
+[debug] [2025-01-26T06:06:04.702Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-01-26T06:06:04.702Z] defaultcredentials: writing to file /Users/millicentsong/.config/firebase/millicentsong_gmail_com_application_default_credentials.json
+[debug] [2025-01-26T06:06:04.703Z] DEBUG: Setting GAC to /Users/millicentsong/.config/firebase/millicentsong_gmail_com_application_default_credentials.json
+[debug] [2025-01-26T06:06:04.703Z] Checked if tokens are valid: true, expires at: 1737875163338
+[debug] [2025-01-26T06:06:04.703Z] Checked if tokens are valid: true, expires at: 1737875163338
+[debug] [2025-01-26T06:06:04.703Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/qcare-b7741/adminSdkConfig [none]
+[debug] [2025-01-26T06:06:05.078Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/qcare-b7741/adminSdkConfig 200
+[debug] [2025-01-26T06:06:05.078Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/qcare-b7741/adminSdkConfig {"projectId":"qcare-b7741","databaseURL":"https://qcare-b7741-default-rtdb.firebaseio.com","storageBucket":"qcare-b7741.firebasestorage.app"}
+[debug] [2025-01-26T06:06:05.091Z] [functions] Watching "/Users/millicentsong/QCare/functions" for Cloud Functions...
+[debug] [2025-01-26T06:06:05.095Z] Validating nodejs source
+[debug] [2025-01-26T06:06:05.515Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-01-26T06:06:05.515Z] Building nodejs source
+[debug] [2025-01-26T06:06:05.515Z] Failed to find version of module node: reached end of search path /Users/millicentsong/QCare/functions/node_modules
+[info] ✔  functions: Using node@20 from host. 
+[debug] [2025-01-26T06:06:05.516Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-26T06:06:05.520Z] Found firebase-functions binary at '/Users/millicentsong/QCare/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8181
+
+[debug] [2025-01-26T06:06:05.798Z] Got response from /__/functions.yaml {"endpoints":{"generateMockPatient":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"generateMockPatient"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-01-26T06:06:09.814Z] [functions] Loaded functions definitions from source: generateMockPatient.
+[debug] [2025-01-26T06:06:09.816Z] [functions[us-central1-generateMockPatient]] http function initialized (http://127.0.0.1:5001/qcare-b7741/us-central1/generateMockPatient).
+[info] i  functions: Loaded functions: generateMockPatient 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
