@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const TestFetch = () => {
-  const [patientData, setPatientData] = useState(null); // Stores fetched patient data
+function TestFetch (patientData, setPatientData) {
+  // const [patientData, setPatientData] = useState(null); 
   const [patientId, setPatientId] = useState(""); // Stores user input for patient ID
   const [error, setError] = useState(null); // Stores any error messages
 
@@ -72,21 +72,27 @@ const TestFetch = () => {
       )}
 
       {/* Display fetched patient data */}
-      {patientData && (
-        <div style={{ marginTop: "20px", textAlign: "left" }}>
-          <h3>Patient Data:</h3>
-          <p><strong>ID:</strong> {patientData.id}</p>
-          <p><strong>Arrival Time:</strong> {patientData.arrival_time}</p>
-          <p>
-            <strong>Queue Position:</strong> Global -{" "}
-            {patientData.queue_position.global}, Category -{" "}
-            {patientData.queue_position.category}
-          </p>
-          <p><strong>Status:</strong> {patientData.status.current_phase}</p>
-          <p><strong>Time Elapsed:</strong> {patientData.time_elapsed} mins</p>
-          <p><strong>Triage Category:</strong> {patientData.triage_category}</p>
-        </div>
-      )}
+      {patientData && Object.keys(patientData).length > 0 && (
+  <div style={{ marginTop: "20px", textAlign: "left" }}>
+    <h3>Patient Data:</h3>
+    <p><strong>ID:</strong> {patientData.id || "N/A"}</p>
+    <p><strong>Arrival Time:</strong> {patientData.arrival_time || "N/A"}</p>
+    {patientData.queue_position ? (
+      <>
+        <p>
+          <strong>Queue Position:</strong> Global -{" "}
+          {patientData.queue_position.global || "N/A"}, Category -{" "}
+          {patientData.queue_position.category || "N/A"}
+        </p>
+      </>
+    ) : (
+      <p><strong>Queue Position:</strong> Not available</p>
+    )}
+    <p><strong>Status:</strong> {patientData.status?.current_phase || "N/A"}</p>
+    <p><strong>Time Elapsed:</strong> {patientData.time_elapsed || "N/A"} mins</p>
+    <p><strong>Triage Category:</strong> {patientData.triage_category || "N/A"}</p>
+  </div>
+)}
     </div>
   );
 };
