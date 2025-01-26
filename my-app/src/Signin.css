@@ -1,0 +1,124 @@
+/* General Styling */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking */
+}
+
+/* Container */
+.signin-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Section */
+.signin-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 0;
+  height: auto; /* Make the top section's height depend on the content */
+  width: 100%; /* Ensure full width */
+}
+
+.signin-logo {
+  width: 100%; /* Make the logo span the full width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fits nicely */
+}
+
+/* Middle Icon Section */
+.icon-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: relative; /* Allow positioning */
+  top: -115px; /* Moves the section up */
+}
+
+.icon-logo {
+  width: 7.875rem;
+  height: 7.875rem;
+  flex-shrink: 0;
+}
+
+/* Bottom Section */
+.signin-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: -90px; /* Moves the container higher up */
+}
+
+.signin-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Input Field */
+.signin-input {
+  width: 12.5625rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 2.8125rem;
+  background: #EDD9E5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.signin-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button */
+.signin-button {
+  width: 12.5625rem;
+  height: 2rem; /* Fixes conflicting height */
+  border-radius: 2.8125rem;
+  background: #002148; /* Dark blue background */
+  color: white; /* Makes text white */
+  border: none; /* Removes any border */
+  font-size: 16px; /* Ensures readable font size */
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer; /* Changes cursor to pointer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease-in-out;
+  margin-top: 30px; /* Moves the container higher up */
+
+}
+
+.signin-button:active {
+  background: #003f7f; /* Even lighter blue when pressed */
+}
+
+.decor-bottom {
+  position: fixed; /* Keeps the image at the bottom-right */
+  bottom: 0px; /* Adjust this value to move the image higher up */
+  right: 0px; /* Adjust this value to move the image further left */
+  z-index: 10; 
+  margin: 0; /* Remove any margin around the container */
+  padding: 0; /* Ensures it appears above other elements if needed */
+}
+
+.decor-logo {
+  width: 300px; /* Adjust the size as needed */
+  height: auto; 
+  display: block;/* Maintain aspect ratio */
+}
