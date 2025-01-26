@@ -4,6 +4,7 @@ import Signin from "./Signin";
 import Home from "./Home";
 import Qbuddy from "./Qbuddy";
 import TestFetch from "./testFetch"; // Correctly imported
+import Data from "./Data"
 
 export default function App() {
   const [patientData, setPatientData] = useState(null);
@@ -14,6 +15,8 @@ export default function App() {
         <Route path="/Signin" element={<Signin />} />
         <Route path="/" element={<Home />} />
         <Route path="/Qbuddy" element={<Qbuddy />} />
+        <Route path="/Data" element={<Data               patientData={patientData}
+              setPatientData={setPatientData}/>} />
         <Route
           path="/testFetch"
           element={

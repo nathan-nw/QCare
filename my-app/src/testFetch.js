@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TestFetch (patientData, setPatientData) {
+function TestFetch ({ patientData, setPatientData }) {
   // const [patientData, setPatientData] = useState(null); 
   const [patientId, setPatientId] = useState(""); // Stores user input for patient ID
   const [error, setError] = useState(null); // Stores any error messages
@@ -63,6 +63,11 @@ function TestFetch (patientData, setPatientData) {
       >
         Fetch Data
       </button>
+      <button>
+  <a href="/Data" style={{ textDecoration: "none", color: "inherit" }}>
+    Go to Target Page
+  </a>
+</button>
 
       {/* Display errors, if any */}
       {error && (
