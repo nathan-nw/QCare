@@ -1,8 +1,8 @@
 import React from "react";
 import "./Signin.css";
-import QCareLogo from "./images/QCAREFINALLOGO.png"; // Import the PNG file
+import QCareLogo from "./images/IMG_6188.png"; // Import the PNG file
 import Icon from "./images/icon.png"
-import Decor from "./images/Polygon 2.png";
+import Decor from "./images/IMG_0384.png";
 
 
 

@@ -40,7 +40,7 @@ body {
   align-items: center;
   height: auto;
   position: relative; /* Allow positioning */
-  top: -100px; /* Moves the section up */
+  top: -115px; /* Moves the section up */
 }
 
 .icon-logo {
@@ -57,7 +57,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin-top: -60px; /* Moves the container higher up */
+  margin-top: -90px; /* Moves the container higher up */
 }
 
 .signin-header {
@@ -70,7 +70,7 @@ body {
 /* Input Field */
 .signin-input {
   width: 12.5625rem;
-  height: 2.875rem;
+  height: 2rem;
   flex-shrink: 0;
   border-radius: 2.8125rem;
   background: #EDD9E5;
@@ -87,7 +87,7 @@ body {
 /* Button */
 .signin-button {
   width: 12.5625rem;
-  height: 2.875rem; /* Fixes conflicting height */
+  height: 2rem; /* Fixes conflicting height */
   border-radius: 2.8125rem;
   background: #002148; /* Dark blue background */
   color: white; /* Makes text white */
@@ -100,7 +100,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: background 0.2s ease-in-out;
-  margin-top: 20px; /* Moves the container higher up */
+  margin-top: 30px; /* Moves the container higher up */
 
 }
 
@@ -110,12 +110,15 @@ body {
 
 .decor-bottom {
   position: fixed; /* Keeps the image at the bottom-right */
-  bottom: 20px; /* Adjust this value to move the image higher up */
-  right: 20px; /* Adjust this value to move the image further left */
-  z-index: 10; /* Ensures it appears above other elements if needed */
+  bottom: 0px; /* Adjust this value to move the image higher up */
+  right: 0px; /* Adjust this value to move the image further left */
+  z-index: 10; 
+  margin: 0; /* Remove any margin around the container */
+  padding: 0; /* Ensures it appears above other elements if needed */
 }
 
 .decor-logo {
   width: 300px; /* Adjust the size as needed */
-  height: auto; /* Maintain aspect ratio */
+  height: auto; 
+  display: block;/* Maintain aspect ratio */
 }
