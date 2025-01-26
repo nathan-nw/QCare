@@ -3,48 +3,61 @@ body {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f0f4ff, #d9e6ff);
-  color: #333;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Ensure vertical stacking */
 }
 
+/* Container */
 .signin-container {
   width: 100%;
-  height: 100%; /* Ensure it takes the full screen height */
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 /* Top Section */
 .signin-top {
-  flex: 1; /* Take up half the screen */
   display: flex;
   justify-content: center;
   align-items: center;
   background: #fff;
   padding: 0;
-  height: 100%; /* Remove any padding in the top container */
+  height: auto; /* Make the top section's height depend on the content */
+  width: 100%; /* Ensure full width */
 }
 
 .signin-logo {
-  width: 414px;
-  height: 337px;
+  width: 100%; /* Make the logo span the full width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fits nicely */
+}
+
+/* Middle Icon Section */
+.icon-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: relative; /* Allow positioning */
+  top: -100px; /* Moves the section up */
+}
+
+.icon-logo {
+  width: 7.875rem;
+  height: 7.875rem;
   flex-shrink: 0;
 }
 
 /* Bottom Section */
 .signin-bottom {
-  flex: 1; /* Take up the other half of the screen */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
   padding: 20px;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: -60px; /* Moves the container higher up */
 }
 
 .signin-header {
@@ -54,16 +67,16 @@ body {
   color: #003366;
 }
 
+/* Input Field */
 .signin-input {
-  width: 100%;
-  max-width: 300px;
-  padding: 10px 15px;
-  margin-bottom: 20px;
+  width: 12.5625rem;
+  height: 2.875rem;
+  flex-shrink: 0;
+  border-radius: 2.8125rem;
+  background: #EDD9E5;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 10px;
   font-size: 16px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.2s ease-in-out;
 }
 
 .signin-input:focus {
@@ -71,22 +84,38 @@ body {
   outline: none;
 }
 
+/* Button */
 .signin-button {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  width: 12.5625rem;
+  height: 2.875rem; /* Fixes conflicting height */
+  border-radius: 2.8125rem;
+  background: #002148; /* Dark blue background */
+  color: white; /* Makes text white */
+  border: none; /* Removes any border */
+  font-size: 16px; /* Ensures readable font size */
   font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
+  text-align: center;
+  cursor: pointer; /* Changes cursor to pointer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.2s ease-in-out;
-}
+  margin-top: 20px; /* Moves the container higher up */
 
-.signin-button:hover {
-  background: #0056b3;
 }
 
 .signin-button:active {
-  background: #003f7f;
+  background: #003f7f; /* Even lighter blue when pressed */
+}
+
+.decor-bottom {
+  position: fixed; /* Keeps the image at the bottom-right */
+  bottom: 20px; /* Adjust this value to move the image higher up */
+  right: 20px; /* Adjust this value to move the image further left */
+  z-index: 10; /* Ensures it appears above other elements if needed */
+}
+
+.decor-logo {
+  width: 300px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
 }

@@ -69,6 +69,11 @@ function Fetch({ patientData, setPatientData }) {
       >
         Fetch Data
       </button>
+      <button>
+  <a href="/Data" style={{ textDecoration: "none", color: "inherit" }}>
+    Go to Target Page
+  </a>
+</button>
 
       {/* Display errors, if any */}
       {error && (
