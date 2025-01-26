@@ -10,7 +10,7 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin"); // Import the Firebase Admin SDK
 const {generateMockPatient} = require(
-    "../Backend/ifem_award_mchacks_2025/javascript/patients.js");
+    "./patients.js");
 
 // Initialize Firebase Admin SDK
 admin.initializeApp({
