@@ -144,7 +144,7 @@ export default function PatientDashboard({ patientData, setPatientData }) {
               <FaMapMarkedAlt className="icon-xlarge-map" />
             </div>
           </div>
-          <div className="metric questions">
+          <div className="metric questions" onClick={() => navigate("/QBuddy")}>
             <h1 className="question-title">Questions?</h1>
             <div className="icon">
               <SlSpeech className="icon-xlarge-q" />
