@@ -1,51 +1,92 @@
-/* Centering container */
+/* General Styling */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #d9e6ff);
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .signin-container {
+  width: 100%;
+  height: 100%; /* Ensure it takes the full screen height */
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+/* Top Section */
+.signin-top {
+  flex: 1; /* Take up half the screen */
+  display: flex;
   justify-content: center;
-  height: 100vh;
-  background-color: #f3f4f6;
-  font-family: Arial, sans-serif;
+  align-items: center;
+  background: #fff;
+  padding: 0;
+  height: 100%; /* Remove any padding in the top container */
 }
 
-/* Header styling */
+.signin-logo {
+  width: 414px;
+  height: 337px;
+  flex-shrink: 0;
+}
+
+/* Bottom Section */
+.signin-bottom {
+  flex: 1; /* Take up the other half of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .signin-header {
-  font-size: 2rem;
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 20px;
-  color: #333;
+  color: #003366;
 }
 
-/* Input styling */
 .signin-input {
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
-  font-size: 1rem;
-  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease-in-out;
 }
 
-/* Button styling */
+.signin-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
 .signin-button {
-  width: 320px;
-  padding: 10px;
-  border-radius: 5px;
+  background: #007bff;
+  color: #fff;
   border: none;
-  background-color: #007bff;
-  color: white;
-  font-size: 1rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.2s ease-in-out;
 }
 
-/* Hover effect for button */
 .signin-button:hover {
-  background-color: #0056b3;
+  background: #0056b3;
 }
 
-.signin-logo{
-    width: 38.9375rem;
-height: 36.1875rem;
+.signin-button:active {
+  background: #003f7f;
 }
