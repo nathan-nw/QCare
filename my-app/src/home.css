@@ -69,9 +69,15 @@
 
 /* Path Progress */
 .path-progress {
-  background: #fde8ef;
-  padding: 15px;
-  border-radius: 10px;
+  width: 156px;
+  height: 236px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: #ffdbdb;
+
+  /* card-shadow */
+  box-shadow: 0px 10px 40px 0px rgba(29, 22, 23, 0.07);
 }
 
 .path-progress h3 {
@@ -112,7 +118,7 @@
   background: rgba(210, 65, 110, 0.1); /* Light red background */
   text-align: center;
   border-radius: 1.25rem; /* Rounded corners */
-  padding:0px; /* Internal padding for content */
+  padding: 0px; /* Internal padding for content */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   display: flex;
   flex-direction: column; /* Align content vertically */
@@ -125,21 +131,21 @@
   font-size: 1rem; /* Adjusted for better readability */
   margin-bottom: 5px; /* Space below the title */
   font-weight: 500; /* Semi-bold */
-  color: #D2416E; /* Neutral text color */
+  color: #d2416e; /* Neutral text color */
 }
 
 /* Metric Content (p) */
 .metric.wait-time p {
   font-size: 1.5rem; /* Slightly larger for emphasis */
   font-weight: bold;
-  color: #D2416E; /* Default text color for the metrics */
+  color: #d2416e; /* Default text color for the metrics */
   margin: 0; /* Remove default margin */
 }
 
 /* Highlighted Text */
 .metric.wait-time .highlight {
   font-size: 2rem; /* Larger for emphasis */
-  color: #D2416E; /* Makes the number (e.g., "15") red */
+  color: #d2416e; /* Makes the number (e.g., "15") red */
 }
 
 /* Specific Adjustments for Icons */
@@ -168,21 +174,21 @@
   font-size: 1rem; /* Adjusted for better readability */
   margin-bottom: 5px; /* Space below the title */
   font-weight: 500; /* Semi-bold */
-  color: #7042C9; /* Purple text color for the title */
+  color: #7042c9; /* Purple text color for the title */
 }
 
 /* Metric Content (p) */
 .metric.queue p {
   font-size: 1.5rem; /* Slightly larger for emphasis */
   font-weight: bold;
-  color: #7042C9; /* Purple text color for the metrics */
+  color: #7042c9; /* Purple text color for the metrics */
   margin: 0; /* Remove default margin */
 }
 
 /* Highlighted Text */
 .metric.queue .highlight {
   font-size: 2rem; /* Larger for emphasis */
-  color: #7042C9; /* Makes the number (e.g., "24") purple */
+  color: #7042c9; /* Makes the number (e.g., "24") purple */
 }
 
 .metric.map {
@@ -205,13 +211,13 @@
   font-size: 1rem; /* Adjusted for better readability */
   margin-bottom: 5px; /* Space below the title */
   font-weight: 500; /* Semi-bold */
-  color: #0DB1AD; /* Teal text color for the title */
+  color: #0db1ad; /* Teal text color for the title */
 }
 
 /* Icon in the Map Box */
 .metric.map .icon {
   font-size: 2rem; /* Larger icon size */
-  color: #0DB1AD; /* Makes the icon teal */
+  color: #0db1ad; /* Makes the icon teal */
   margin-top: 5px; /* Adds slight spacing from the title */
 }
 .metric.questions {
@@ -234,12 +240,99 @@
   font-size: 1rem; /* Adjusted for better readability */
   margin-bottom: 5px; /* Space below the title */
   font-weight: 500; /* Semi-bold */
-  color: #197BD2; /* Yellow text color for the title */
+  color: #197bd2; /* Yellow text color for the title */
 }
 
 /* Icon in the Questions Box */
 .metric.questions .icon {
   font-size: 2rem; /* Larger icon size */
-  color: #197BD2; /* Makes the icon yellow */
+  color: #197bd2; /* Makes the icon yellow */
   margin-top: 5px; /* Adds slight spacing from the title */
+}
+
+/* Timeline Container */
+/* Timeline Container (Vertical) */
+.timeline-container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 1px 0;
+  width: 200px;
+  margin-left: 10px;
+  /* Smaller width */
+}
+
+/* Individual Timeline Step (Vertical) */
+.timeline-step-vertical {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1px; /* Reduce space between steps */
+}
+
+.timeline-step-info {
+  margin-left: 10px;
+}
+
+/* Step Name and Time Styling */
+.timeline-step-name {
+  font-size: 12px; /* Smaller font size */
+  color: #333;
+}
+
+/* Outer Circle */
+.timeline-outer-circle {
+  width: 6px; /* Slightly larger size */
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #ccc; /* Make the border slightly thicker */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner Circle */
+.timeline-inner-circle {
+  width: 3px; /* Slightly larger size */
+  height: 3px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Inner circle lights up for the current step */
+.timeline-inner-circle.current {
+  background-color: blue;
+}
+
+/* Status-based Outer Circle Styling */
+.timeline-outer-circle.completed {
+  border-color: rgb(0, 30, 128);
+}
+
+.timeline-outer-circle.current {
+  border-color: blue;
+}
+
+.timeline-outer-circle.upcoming {
+  border-color: #ccc;
+}
+
+/* Connecting Line (Vertical) */
+.timeline-line-vertical {
+  position: absolute;
+  top: 3px; /* Adjust positioning for better visibility */
+  left: 3px; /* Center line with circles */
+  width: 1px; /* Thicker line for better visibility */
+  height: 10px; /* Increase line height to make it more visible */
+  background-color: #ccc; /* Default color */
+}
+
+.timeline-line-vertical.completed {
+  background-color: green; /* Make completed line more visible */
+}
+
+.timeline-line-vertical.upcoming {
+  background-color: #ccc;
 }

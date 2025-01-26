@@ -2,7 +2,15 @@ import React from "react";
 import "./home.css"; // Add CSS styles in a separate file
 import QCareLogo from "./images/IMG_2000.png"; // Replace with your actual logo path
 
-export default function PatientDashboard() {
+export default function PatientDashboard({ patientData, setPatientData }) {
+  const timelineSteps = [
+    { id: 1, name: "Triage", status: "completed" },
+    { id: 2, name: "Diagnostics", status: "completed" },
+    { id: 3, name: "Waiting Period", status: "current" },
+    { id: 4, name: "Treatment", status: "upcoming" },
+    { id: 5, name: "Discharge", status: "upcoming" },
+  ];
+
   return (
     <div className="dashboard-container">
       {/* Header */}
@@ -10,7 +18,9 @@ export default function PatientDashboard() {
         <img src={QCareLogo} alt="QCare Logo" className="logo" />
         <div className="greeting">
           <h2>Hello,</h2>
-          <h1>Patient <span className="highlight">1036</span></h1>
+          <h1>
+            Patient <span className="highlight">{patientData.id}</span>
+          </h1>
         </div>
         <div className="hospital-status">
           <span>Hospital Status</span>
@@ -23,39 +33,62 @@ export default function PatientDashboard() {
         {/* Path Progress */}
         <section className="path-progress">
           <h3>Your Path</h3>
-          <ul>
-            <li>
-              <span>Discharge</span>
-              <span className="status incomplete">Incomplete</span>
-            </li>
-            <li>
-              <span>Treatment</span>
-              <span className="status incomplete">Incomplete</span>
-            </li>
-            <li>
-              <span>Waiting Period</span>
-              <span className="time">9:40 pm</span>
-            </li>
-            <li>
-              <span>Diagnostics</span>
-              <span className="time">9:10 pm</span>
-            </li>
-            <li>
-              <span>Triage</span>
-              <span className="time">8:51 pm</span>
-            </li>
-          </ul>
+          <div className="timeline-container-vertical">
+            {timelineSteps
+              .slice()
+              .reverse() // Reverse the order to start with Discharge at the top
+              .map((step, index) => (
+                <div key={step.id} className="timeline-step-vertical">
+                  {/* Outer Circle */}
+                  <div
+                    className={`timeline-outer-circle ${
+                      step.status === "completed"
+                        ? "completed"
+                        : step.status === "current"
+                        ? "current"
+                        : "upcoming"
+                    }`}
+                  >
+                    {/* Inner Circle */}
+                    <div
+                      className={`timeline-inner-circle ${
+                        step.status === "current" ? "current" : ""
+                      }`}
+                    ></div>
+                  </div>
+
+                  {/* Step Name and Time */}
+                  <div className="timeline-step-info">
+                    <p className="timeline-step-name">{step.name}</p>
+                    {step.time && <p className="timeline-time">{step.time}</p>}
+                  </div>
+
+                  {/* Connecting Line */}
+                  {index < timelineSteps.length - 1 && (
+                    <div
+                      className={`timeline-line-vertical ${
+                        step.status === "completed" ? "completed" : "upcoming"
+                      }`}
+                    ></div>
+                  )}
+                </div>
+              ))}
+          </div>
         </section>
 
         {/* Metrics Section */}
         <section className="metrics">
           <div className="metric wait-time">
             <h3>Wait Time</h3>
-            <p><span className="highlight">15</span> min</p>
+            <p>
+              <span className="highlight">15</span> min
+            </p>
           </div>
           <div className="metric queue">
             <h3>Queue</h3>
-            <p><span className="highlight">24</span> in line</p>
+            <p>
+              <span className="highlight">24</span> in line
+            </p>
           </div>
           <div className="metric map">
             <h3>Map</h3>
