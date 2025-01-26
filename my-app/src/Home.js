@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.css"; // Add CSS styles in a separate file
 import QCareLogo from "./images/IMG_2000.png"; // Replace with your actual logo path
+import { useNavigate } from "react-router-dom";
 
 export default function PatientDashboard({ patientData, setPatientData }) {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!patientData) {
+      navigate("/Signin"); // Navigate to SignIn if patientData is null
+    }
+  }, [patientData, navigate]);
+
   const timelineSteps = [
     { id: 1, name: "Triage", status: "completed" },
     { id: 2, name: "Diagnostics", status: "completed" },
@@ -10,6 +19,12 @@ export default function PatientDashboard({ patientData, setPatientData }) {
     { id: 4, name: "Treatment", status: "upcoming" },
     { id: 5, name: "Discharge", status: "upcoming" },
   ];
+
+  if (!patientData) {
+    return null; // Prevent rendering if patientData is null
+  }
+
+  const extractedId = patientData.id.split("_")[1];
 
   return (
     <div className="dashboard-container">
@@ -19,7 +34,7 @@ export default function PatientDashboard({ patientData, setPatientData }) {
         <div className="greeting">
           <h2>Hello,</h2>
           <h1>
-            Patient <span className="highlight">{patientData.id}</span>
+            Patient <span className="highlight">{extractedId}</span>
           </h1>
         </div>
         <div className="hospital-status">

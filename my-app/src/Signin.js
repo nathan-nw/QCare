@@ -17,7 +17,7 @@ export default function Signin({ patientData, setPatientData }) {
     // Call fetchPatientData and redirect upon success
     const isSuccessful = await fetchPatientData();
     if (isSuccessful) {
-      navigate("/Data"); // Redirect to the homepage
+      navigate("/"); // Redirect to the homepage
     }
   };
 
