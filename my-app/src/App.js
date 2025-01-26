@@ -1,18 +1,17 @@
-// import logo from "./logo.svg";
-// import "./App.css";
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Signin from "./Signin";
+import Home from "./Home";
+import Qbuddy from "./Qbuddy";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./login.js";
-
-function App() { 
+export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/Signin" element={<Signin />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Qbuddy" element={<Qbuddy/>} />
       </Routes>
     </Router>
   );
 }
-
-export default App;
