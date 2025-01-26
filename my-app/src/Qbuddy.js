@@ -63,8 +63,9 @@ function Qbuddy() {
   };
 
   return (
-    <div className="container">
-      <div className="title">QBuddy</div>
+    <div className="QBuddyWrapper">
+    <div className="QBuddycontainer">
+      <div className="title5">QBuddy</div>
 
       {/* Back to Home Button */}
       <button className="back-button" onClick={() => navigate("/")}></button>
@@ -87,16 +88,17 @@ function Qbuddy() {
         )}
       </div>
 
-      <div className="input-container">
+      <div className="input-container2">
         <input
-          className="input"
+          className="input1"
           placeholder="Type your message..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
         />
-        <FaCircleArrowUp className="button" onClick={handleSendMessage} />
+        <FaCircleArrowUp className="button3" onClick={handleSendMessage} />
       </div>
+    </div>
     </div>
   );
 }

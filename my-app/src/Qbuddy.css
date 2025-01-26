@@ -1,19 +1,18 @@
 /* Qbuddy.css */
 
-/* General styles */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #1c2b3a; /* Pastel dark blue background */
-  color: #ffffff; /* White text */
+.QBuddyWrapper{
   margin: 0;
   padding: 0;
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  background-color: #1c2b3a; /* Pastel dark blue background */
+  color: #ffffff; /* White text */
 }
 
-.container {
+.QBuddycontainer {
   width: 100%;
   max-width: 400px;
   margin: auto;
@@ -26,7 +25,7 @@ body {
   height: 80vh;
 }
 
-.title {
+.title5 {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -68,7 +67,7 @@ body {
 }
 
 /* Input field and button styles */
-.input-container {
+.input-container2 {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -76,7 +75,7 @@ body {
   padding-top: 10px;
 }
 
-.input {
+.input1 {
   flex: 1;
   padding: 14px;
   border: none;
@@ -92,14 +91,14 @@ body {
   color: #b0bec5;
 }
 
-.button {
+.button3 {
   cursor: pointer;
   font-size: 28px;
   color: #a8d5e2;
   transition: transform 0.2s ease-in-out;
 }
 
-.button:hover {
+.button3:hover {
   transform: scale(1.1);
 }
 
