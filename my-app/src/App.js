@@ -12,11 +12,16 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/Signin" element={<Signin />} />
+        <Route path="/Signin" element={<Signin               
+          patientData={patientData}
+          setPatientData={setPatientData}/>} />
         <Route path="/" element={<Home />} />
         <Route path="/Qbuddy" element={<Qbuddy />} />
-        <Route path="/Data" element={<Data               patientData={patientData}
-              setPatientData={setPatientData}/>} />
+        <Route path="/Data" element={<Data               
+              patientData={patientData}
+              setPatientData={setPatientData}
+              />
+              } />
         <Route
           path="/testFetch"
           element={

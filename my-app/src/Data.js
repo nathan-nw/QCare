@@ -4,7 +4,7 @@ function Data({ patientData, setPatientData }) {
     console.log(patientData);
   return (
     <div>
-      <h1>{patientData}</h1>
+      <h1>{patientData.id}</h1>
     </div>
   );
 }
