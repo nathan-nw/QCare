@@ -14,7 +14,8 @@ function TestFetch ({ patientData, setPatientData }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5001/qcare-b7741/us-central1/generateMockPatient?patientId=${patientId}`
+        // `http://127.0.0.1:5001/qcare-b7741/us-central1/generateMockPatient?patientId=${patientId}`
+        `https://b67b-2605-8d80-5c0-4a6-adcb-544e-7af0-25e7.ngrok-free.app/us-central1/generateMockPatient?patientId=${patientId}`
       );
 
       if (!response.ok) {
