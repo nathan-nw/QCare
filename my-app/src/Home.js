@@ -17,7 +17,6 @@ export default function PatientDashboard({ patientData, setPatientData }) {
       navigate("/Signin"); // Navigate to SignIn if patientData is null
     }
   }, [patientData, navigate]);
- 
 
   if (!patientData) {
     return null; // Prevent rendering if patientData is null
@@ -25,40 +24,41 @@ export default function PatientDashboard({ patientData, setPatientData }) {
 
   const extractedId = patientData.id.split("_")[1];
 
-
   const triageElapsed = patientData.triage_category;
 
   console.log(triageElapsed);
 
-  var triage = "upcoming", diagnostics = "upcoming", waiting = "upcoming", treatment = "upcoming", discharge = "upcoming";
+  var triage = "upcoming",
+    diagnostics = "upcoming",
+    waiting = "upcoming",
+    treatment = "upcoming",
+    discharge = "upcoming";
 
-  if(triageElapsed >= 5){
+  if (triageElapsed >= 5) {
     discharge = "completed";
-  } 
-  if(triageElapsed >= 4){
+  }
+  if (triageElapsed >= 4) {
     treatment = "completed";
   }
-  if(triageElapsed >= 3){ 
+  if (triageElapsed >= 3) {
     waiting = "completed";
   }
-  if(triageElapsed >= 2){
+  if (triageElapsed >= 2) {
     diagnostics = "completed";
   }
-  if(triageElapsed >= 1){
-    triage = "completed"; 
+  if (triageElapsed >= 1) {
+    triage = "completed";
   }
 
   console.log(triage, diagnostics, waiting, treatment, discharge);
 
-    const timelineSteps = [
-      { id: 1, name: "Triage", status: triage },
-      { id: 2, name: "Diagnostics", status: diagnostics },
-      { id: 3, name: "Waiting Period", status: waiting },
-      { id: 4, name: "Treatment", status: treatment },
-      { id: 5, name: "Discharge", status: discharge },
-    ];
-
-
+  const timelineSteps = [
+    { id: 1, name: "Triage", status: triage },
+    { id: 2, name: "Diagnostics", status: diagnostics },
+    { id: 3, name: "Waiting Period", status: waiting },
+    { id: 4, name: "Treatment", status: treatment },
+    { id: 5, name: "Discharge", status: discharge },
+  ];
 
   return (
     <div className="dashboard-container">
@@ -79,46 +79,46 @@ export default function PatientDashboard({ patientData, setPatientData }) {
 
       {/* Main Content */}
       <main className="dashboard-main">
-      <div className="path-progress-container">
-    <div className="Peoplepic">
-      <img src={People} alt="People" className="People" />
-    </div>
-        {/* Path Progress */}
-        <section className="path-progress">
-          <h3>Your Path</h3>
-          <div className="timeline-container-vertical">
-            {timelineSteps.map((step, index) => (
-              <div key={step.id} className="timeline-step-vertical">
-                {/* Outer Circle */}
-                <div
-                  className={`timeline-outer-circle ${
-                    step.status == "completed"
-                      ? "completed"
-                      : step.status == "current"
-                      ? "current"
-                      : "upcoming"
-                  }`}
-                ></div>
-
-                {/* Connecting Line */}
-                {index < timelineSteps.length - 1 && (
+        <div className="path-progress-container">
+          <div className="Peoplepic">
+            <img src={People} alt="People" className="People" />
+          </div>
+          {/* Path Progress */}
+          <section className="path-progress">
+            <h3>Your Path</h3>
+            <div className="timeline-container-vertical">
+              {timelineSteps.map((step, index) => (
+                <div key={step.id} className="timeline-step-vertical">
+                  {/* Outer Circle */}
                   <div
-                    className={`timeline-line-vertical ${
-                      step.status == "completed" ? "completed" : "upcoming"
+                    className={`timeline-outer-circle ${
+                      step.status == "completed"
+                        ? "completed"
+                        : step.status == "current"
+                        ? "current"
+                        : "upcoming"
                     }`}
                   ></div>
-                )}
 
-                {/* Step Info */}
-                <div className="timeline-step-info">
-                  <p className="timeline-step-name">{step.name}</p>
-                  {step.time && <p className="timeline-time">{step.time}</p>}
+                  {/* Connecting Line */}
+                  {index < timelineSteps.length - 1 && (
+                    <div
+                      className={`timeline-line-vertical ${
+                        step.status == "completed" ? "completed" : "upcoming"
+                      }`}
+                    ></div>
+                  )}
+
+                  {/* Step Info */}
+                  <div className="timeline-step-info">
+                    <p className="timeline-step-name">{step.name}</p>
+                    {step.time && <p className="timeline-time">{step.time}</p>}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        </div>  
+              ))}
+            </div>
+          </section>
+        </div>
 
         {/* Metrics Section */}
         <section className="metrics">
@@ -127,7 +127,9 @@ export default function PatientDashboard({ patientData, setPatientData }) {
               <FaHeartPulse className="icon-large" /> Lab Work
             </h1>
             <p>
-              <span className="highlight">{patientData.status.investigations.labs}</span>
+              <span className="highlight">
+                {patientData.status.investigations.labs}
+              </span>
             </p>
           </div>
           <div className="metric queue">
@@ -135,15 +137,34 @@ export default function PatientDashboard({ patientData, setPatientData }) {
               <FaBoltLightning className="icon-large" /> Queue
             </h1>
             <p>
-              <span className="highlight">{patientData.queue_position.category}</span> in line
+              <span className="highlight">
+                {patientData.queue_position.category}
+              </span>{" "}
+              in line
             </p>
           </div>
-          <div className="metric map">
+          {/* <div className="metric map">
+            <h1 className="map-title">Map</h1>
+            <div className="icon">
+              <FaMapMarkedAlt className="icon-xlarge-map" />
+            </div>
+          </div> */}
+          <div
+            className="metric map"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/map.pdf";
+              link.download = "map.pdf";
+              link.click();
+            }}
+            style={{ cursor: "pointer" }}
+          >
             <h1 className="map-title">Map</h1>
             <div className="icon">
               <FaMapMarkedAlt className="icon-xlarge-map" />
             </div>
           </div>
+
           <div className="metric questions" onClick={() => navigate("/QBuddy")}>
             <h1 className="question-title">Questions?</h1>
             <div className="icon">
