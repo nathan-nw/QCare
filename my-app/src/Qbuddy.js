@@ -5,7 +5,8 @@ import "./Qbuddy.css";
 import { FaCircleArrowUp } from "react-icons/fa6";
 
 // 🔁 Local Firebase Function URL
-const LOCAL_QBUDDY_URL = "http://localhost:5001/qcare-b7741/us-central1/qbuddyChat";
+// const LOCAL_QBUDDY_URL = "http://localhost:5001/qcare-b7741/us-central1/qbuddyChat";
+const LOCAL_QBUDDY_URL = "https://b67b-2605-8d80-5c0-4a6-adcb-544e-7af0-25e7.ngrok-free.app/qcare-b7741/us-central1/qbuddyChat";
 
 function Qbuddy() {
   const [messages, setMessages] = useState([]);
