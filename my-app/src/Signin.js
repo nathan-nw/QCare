@@ -99,9 +99,7 @@ export default function Signin({ patientData, setPatientData }) {
         </p>
       )}
       </div>
-      <div className="decor-bottom">
-        <img src={Decor} alt="decor" className="decor-logo" />
-      </div>
+     
     </div>
   );
 }

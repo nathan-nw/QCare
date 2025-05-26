@@ -1,6 +1,6 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
-const OpenAI = require("openai");
+const { OpenAI } = require("openai");
 const {Configuration, OpenAIApi} = require("openai");
 require("dotenv").config();
 
@@ -8,6 +8,9 @@ require("dotenv").config();
 admin.initializeApp({
   databaseURL: "https://qcare-b7741-default-rtdb.firebaseio.com/",
 });
+
+// Reference to the Realtime Database
+const database = admin.database();
 
 exports.generateMockPatient = functions.https.onRequest(async (request, response) => {
   try {
@@ -21,18 +24,20 @@ exports.generateMockPatient = functions.https.onRequest(async (request, response
     const snapshot = await database.ref("patients").get();
 
     if (!snapshot.exists()) {
-      return response.status(404).send({ error: "No patients found." });
+      return response.status(404).send({ error: "No patients found in database." });
     }
 
     // Find the patient with the matching ID
     let patientData = null;
     snapshot.forEach((childSnapshot) => {
-      if (childSnapshot.val().id === patientId) {
-        patientData = childSnapshot.val();
+      const patient = childSnapshot.val();
+      if (patient.id === patientId) {
+        patientData = patient;
       }
     });
 
     if (!patientData) {
+      console.log(`Patient with ID ${patientId} not found in database`);
       return response.status(404).send({ error: "Patient not found." });
     }
 
@@ -48,8 +53,6 @@ exports.generateMockPatient = functions.https.onRequest(async (request, response
     });
   }
 });
-// Reference to the Realtime Database
-const database = admin.database();
 
 // OpenAI setup
 const openai = new OpenAI({
